@@ -2,7 +2,7 @@ const { ethers } = require('ethers')
 const prompt = require('prompt-sync')()
 require('dotenv').config()
 
-const RPC_URL = 'https://rpc.particle.network/'
+const RPC_URL = 'https://rpc.particle.network/evm-chain'
 const CHAIN_ID = 59141
 const provider = new ethers.JsonRpcProvider(RPC_URL, CHAIN_ID)
 
