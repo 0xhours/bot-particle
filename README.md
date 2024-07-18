@@ -33,12 +33,16 @@ touch .env
 ```
 
 ```bash
+vim .env
+```
+
+```bash
 nano .env
 ```
 
 ```bash
-SEED_PHRASES=["your seed phrase 1", "your seed phrase 2"]
-PRIVATE_KEYS=["your private key 1", "your private key 2"]
+projectId=["your projectId"]
+projectServerKey=["your projectServerKey"]
 ```
 
 ### 4. Run script
@@ -48,6 +52,13 @@ npm run start
 ```
 
 \*Make sure you have Node.js and git installed on your system.
+\*make sure you have axios installed on your system if you don't have install with this command :
+
+# using npm
+npm install axios
+
+# using yarn
+yarn add axios
 
 ### Contact
 
