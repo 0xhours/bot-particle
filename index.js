@@ -3,23 +3,42 @@ const prompt = require('prompt-sync')()
 require('dotenv').config()
 
 const RPC_URL = 'https://rpc.particle.network/evm-chain'
-const CHAIN_ID = 59141
+const CHAIN_ID = 11155420
 const provider = new ethers.JsonRpcProvider(RPC_URL, CHAIN_ID)
 
 function generateRandomAddress() {
   return ethers.Wallet.createRandom().address
 }
 
-async function main() {
-  const seedPhrases = JSON.parse(process.env.SEED_PHRASES || '[]')
-  const privateKeys = JSON.parse(process.env.PRIVATE_KEYS || '[]')
 
+const axios = require('axios');
+
+const chainId = 11155420; // Optimism Sepolia Network
+const projectId = 'Your Project Id';
+const projectServerKey = 'Your Project Client Or Server Key';
+
+(async () => {
+    const response = await axios.post(`https://rpc.particle.network/evm-chain?chainId=${chainId}`, {
+        method: 'eth_getBalance',
+        params: [
+            '0xE860aE9379B1902DC08F67F50de7b9CC066AF0FF',
+            'latest',
+        ],
+    }, {
+        auth: {
+            username: projectId,
+            password: projectServerKey,
+        },
+    });
+
+    console.log(response.data);
+})();
   let wallets = []
-  seedPhrases.forEach((mnemonic) => {
-    wallets.push(ethers.Wallet.fromPhrase(mnemonic.trim()))
+  projectId.forEach((Id) => {
+    wallets.push(ethers.Wallet.fromprojectId(Id.trim()))
   })
-  privateKeys.forEach((privateKey) => {
-    wallets.push(new ethers.Wallet(privateKey.trim()))
+  projectServerKey.forEach((serverkey) => {
+    wallets.push(new ethers.Wallet(serverkey.trim()))
   })
 
   if (wallets.length === 0) {
