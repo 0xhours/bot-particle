@@ -11,11 +11,11 @@ EVM :
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/Mnuralim/bot-unit-zero.git
+git clone https://github.com/0xhours/bot-particle.git
 ```
 
 ```
-cd bot-unit-zero
+cd bot-particle
 ```
 
 ### 2. Instal Dependency
@@ -51,6 +51,6 @@ npm run start
 
 ### Contact
 
-github : [Mnuralim](https://github.com/Mnuralim)
-twitter :[@Izzycracker04](https://twitter.com/Izzycracker04)
-telegram : [@fitriay19]
+github : [0xhours](https://github.com/0xhours)
+twitter :[@0xhours](https://twitter.com/0xhours)
+telegram : [@Oxhours]
