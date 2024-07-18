@@ -11,28 +11,9 @@ function generateRandomAddress() {
 }
 
 
-const axios = require('axios');
-
-const chainId = 11155420; // Optimism Sepolia Network
-const projectId = 'Your Project Id';
-const projectServerKey = 'Your Project Client Or Server Key';
-
-(async () => {
-    const response = await axios.post(`https://rpc.particle.network/evm-chain?chainId=${chainId}`, {
-        method: 'eth_getBalance',
-        params: [
-            '0xE860aE9379B1902DC08F67F50de7b9CC066AF0FF',
-            'latest',
-        ],
-    }, {
-        auth: {
-            username: projectId,
-            password: projectServerKey,
-        },
-    });
-
-    console.log(response.data);
-})();
+async function main() {
+ const projectId = 'Your Project Id';
+ const projectServerKey = 'Your Project Client Or Server Key';
   let wallets = []
   projectId.forEach((Id) => {
     wallets.push(ethers.Wallet.fromprojectId(Id.trim()))
